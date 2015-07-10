@@ -199,12 +199,12 @@ msgstr "Marcar como hecho"
 #. module: openacademy
 #: view:openacademy.course:openacademy.course_search_view
 msgid "My Courses"
-msgstr "My Courses"
+msgstr "Mis Cursos"
 
 #. module: openacademy
 #: field:openacademy.session,name:0
 msgid "Name"
-msgstr "Name"
+msgstr "Nombre"
 
 #. module: openacademy
 #: field:openacademy.session,seats:0
@@ -235,7 +235,7 @@ msgstr "Empresa"
 #. module: openacademy
 #: view:openacademy.course:openacademy.course_form_view
 msgid "Registered sessions"
-msgstr "Sesiones Regisradas"
+msgstr "Sesiones Registradas"
 
 #. module: openacademy
 #: view:openacademy.session:openacademy.session_form_view
