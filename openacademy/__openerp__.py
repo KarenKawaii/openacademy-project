@@ -25,7 +25,8 @@
         'workflow/openacademy_session_workflow.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
-        'view/openacademy_wizard_view.xml'
+        'view/openacademy_wizard_view.xml',
+        'report/openacademy_session_report.xml',
         #'templates.xml',
     ],
     # only loaded in demonstration mode
