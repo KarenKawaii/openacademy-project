@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-11 01:00+0000\n"
-"PO-Revision-Date: 2015-07-11 01:00+0000\n"
+"POT-Creation-Date: 2015-08-10 19:42+0000\n"
+"PO-Revision-Date: 2015-08-10 19:42+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr "El instructor de una sesión no puede ser un asistente"
 #. module: openacademy
 #: view:openacademy.course:openacademy.course_form_view
 msgid "About"
-msgstr "Sobre"
+msgstr "Acerca de"
 
 #. module: openacademy
 #: field:openacademy.session,active:0
@@ -58,9 +58,20 @@ msgid "Attendees"
 msgstr "Asistentes"
 
 #. module: openacademy
+#: view:board.board:openacademy.board_session_form
+#: model:ir.actions.act_window,name:openacademy.act_session_graph
+msgid "Attendees by course"
+msgstr "Asistentes por curso"
+
+#. module: openacademy
 #: field:openacademy.session,attendees_count:0
 msgid "Attendees count"
 msgstr "Contador de asistentes"
+
+#. module: openacademy
+#: view:website:openacademy.report_session_view
+msgid "Attendees:"
+msgstr "Asistentes:"
 
 #. module: openacademy
 #: view:openacademy.wizard:openacademy.wizard_form_view
@@ -123,6 +134,8 @@ msgid "Course Form"
 msgstr "Curso Form"
 
 #. module: openacademy
+#: view:board.board:openacademy.board_session_form
+#: model:ir.actions.act_window,name:openacademy.act_course_list
 #: model:ir.actions.act_window,name:openacademy.course_list_action
 #: model:ir.ui.menu,name:openacademy.courses_menu
 msgid "Courses"
@@ -179,6 +192,11 @@ msgid "End Date"
 msgstr "Fecha Límite"
 
 #. module: openacademy
+#: view:website:openacademy.report_session_view
+msgid "From"
+msgstr "De"
+
+#. module: openacademy
 #: view:openacademy.session:openacademy.session_form_view
 msgid "General"
 msgstr "General"
@@ -205,7 +223,7 @@ msgstr "Valor incorrecto de 'asientos'"
 #: code:addons/openacademy/model/openacademy_session.py:58
 #, python-format
 msgid "Increase seats or remove excess attendees"
-msgstr "Incremente o elimine el exceso de asientos"
+msgstr "Incremente o elimine el exceso de asistentes"
 
 #. module: openacademy
 #: field:openacademy.session,instructor_id:0
@@ -287,7 +305,7 @@ msgstr "Responsable"
 #. module: openacademy
 #: view:openacademy.session:openacademy.session_form_view
 msgid "Schedule"
-msgstr "Itinerario"
+msgstr "Planeación"
 
 #. module: openacademy
 #: field:openacademy.wizard,session_wiz_ids:0
@@ -300,6 +318,13 @@ msgid "Session Calendar"
 msgstr "Calendario de Sesión"
 
 #. module: openacademy
+#: view:board.board:openacademy.board_session_form
+#: model:ir.actions.act_window,name:openacademy.open_board_session
+#: model:ir.ui.menu,name:openacademy.menu_board_session
+msgid "Session Dashboard"
+msgstr "Tablero de Sesión"
+
+#. module: openacademy
 #: view:openacademy.session:openacademy.session_form_view
 msgid "Session Form"
 msgstr "Sesión Form"
@@ -308,6 +333,11 @@ msgstr "Sesión Form"
 #: view:openacademy.session:openacademy.session_gantt_view
 msgid "Session Gantt"
 msgstr "Sesión Gantt"
+
+#. module: openacademy
+#: model:ir.actions.report.xml,name:openacademy.report_session
+msgid "Session Report"
+msgstr "Reporte de Sesión"
 
 #. module: openacademy
 #: view:openacademy.session:openacademy.session_tree_view
@@ -325,6 +355,8 @@ msgid "Session name:"
 msgstr "Nombre de Sesión:"
 
 #. module: openacademy
+#: view:board.board:openacademy.board_session_form
+#: model:ir.actions.act_window,name:openacademy.act_session_calendar
 #: model:ir.actions.act_window,name:openacademy.session_list_action
 #: model:ir.ui.menu,name:openacademy.session_menu
 #: view:openacademy.course:openacademy.course_form_view
@@ -379,7 +411,7 @@ msgstr "El título del curso debe ser único"
 #: code:addons/openacademy/model/openacademy_session.py:51
 #, python-format
 msgid "The number of available seats may not be negative"
-msgstr "El número de asientos no debe ser negativo"
+msgstr "El número de asientos disponibles no debe ser negativo"
 
 #. module: openacademy
 #: code:addons/openacademy/model/openacademy_course.py:26
@@ -413,4 +445,9 @@ msgstr "duración:"
 #: view:openacademy.wizard:openacademy.wizard_form_view
 msgid "or"
 msgstr "ó"
+
+#. module: openacademy
+#: view:website:openacademy.report_session_view
+msgid "to"
+msgstr "para"
 
