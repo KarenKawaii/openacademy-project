@@ -8,8 +8,8 @@
     'author': "vauxoo",
     'website': "http://www.vauxoo.com",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module$
+    # Categories can be used to filter modules in modules listing. Check:
+    # https://github.com/odoo/odoo/blob/master/openerp/addons/base/module$
     # for the full list
     'category': 'Test',
     'version': '0.1',
@@ -28,7 +28,7 @@
         'view/openacademy_wizard_view.xml',
         'report/openacademy_session_report.xml',
         'view/openacademy_session_board.xml',
-        #'templates.xml',
+        # 'templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

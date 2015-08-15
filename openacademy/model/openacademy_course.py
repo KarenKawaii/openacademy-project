@@ -1,21 +1,23 @@
-
+# -*- coding: utf-8 -*-
 '''
 This module create model of Course
 '''
 
 from openerp import api, fields, models, _
 
+
 class Course(models.Model):
     '''
     This class create model of Course
     '''
-    _name = 'openacademy.course'  #  Model odoo name
+    _name = 'openacademy.course'  # Model odoo name
 
-    name = fields.Char(string ='Title', required=True)  #  Field reserved to identified name rec
+    name = fields.Char(string='Title',
+                       required=True)  # Field reserved to identified name rec
     description = fields.Text(string='Description')
     responsible_id = fields.Many2one('res.users',
-                                    ondelete='set null',
-                                    string="Responsible", index=True)
+                                     ondelete='set null',
+                                     string="Responsible", index=True)
     session_ids = fields.One2many(
         'openacademy.session', 'course_id', string="Sessions")
 
@@ -29,7 +31,7 @@ class Course(models.Model):
          _("The course title must be unique")),
     ]
 
-    @api.one  #  api.one send defaults params: cr, uid, id, context
+    @api.one  # api.one send defaults params: cr, uid, id, context
     def copy(self, default=None):
         # print "estoy pasando por la funcion heredada de copy en cursos"
         if default is None:
