@@ -68,7 +68,7 @@ class Session(models.Model):
     @api.one
     @api.depends('start_date', 'duration')
     def _get_end_date(self):
-        print "_get_end_date-----------"
+        # print "_get_end_date-----------" Used only for development
         if not (self.start_date and self.duration):
             self.end_date = self.start_date
             return
@@ -83,7 +83,7 @@ class Session(models.Model):
     def _set_end_date(self):
         if not (self.start_date and self.end_date):
             return
-        print "_set_end_date------------------------"
+        # print "_set_end_date------------------------" Used only for development
         # Compute the difference between dates, but: Friday - Monday = 4 days,
         # so add one day to get 5 days instead
         start_date = fields.Datetime.from_string(self.start_date)
