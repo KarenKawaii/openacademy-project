@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
+        <!--paper format-->
+        <record id="paperformat_us" model="report.paperformat">
+            <field name="name">US Letter</field>
+            <field name="default" eval="True" />
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">20</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
         <!--report definition-->
         <report
             id="report_session"
@@ -9,12 +25,15 @@
             name="openacademy.report_session_view"
             file="openacademy.report_session"
             report_type="qweb-pdf" />
-
+        <!--adding paperformat to the report action itself-->
+        <record id="report_session" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="openacademy.paperformat_us"/>
+        </record>
         <!--report template-->
         <template id="report_session_view">
             <t t-call="report.html_container">
                 <t t-foreach="docs" t-as="doc">
-                    <!--<t t-call="report.external_layout">-->
+                    <t t-call="report.external_layout">
                         <div class="page">
                             <h2 t-field="doc.name"/>
                             <h2 t-field="doc.course_id.name"/>
@@ -31,7 +50,7 @@
                             </ul>
                         </div>
                     </t>
-                <!--</t>-->
+                </t>
             </t>
         </template>
     </data>
