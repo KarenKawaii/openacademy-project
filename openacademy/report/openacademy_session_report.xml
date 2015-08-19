@@ -35,10 +35,18 @@
                 <t t-foreach="docs" t-as="doc">
                     <t t-call="report.external_layout">
                         <div class="page">
-                            <h2 t-field="doc.name"/>
-                            <h2 t-field="doc.course_id.name"/>
+                           <div style="vertical-align: middle;"> 
+                            <p style="font-size: 42px; font-weight: bold; font-family:Arial, Helvetica, sans-serif; color:#000000; text-align: center">
+                            "<span style="font-size: 42px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #000000;
+                                text-align: center;" t-field="doc.name"/>"
+                            </p>
+                            <h2 style="font-family: cursive; font-weight: bold; color: #000000; text-align: center">Reporte del Curso:</h2>
+                            <h2 style="font-family: cursive; font-weight: bold; color: #000000; text-align: center" t-field="doc.course_id.name"/>
+                            </div>
+                            <p style="page-break-after:always;"/>
+                            <h4>Instructor: <span t-field="doc.instructor_id"/></h4> 
                             <p>From <span t-field="doc.start_date"/> to <span t-field="doc.end_date"/></p>
-                            <h3>Attendees:</h3>
+                            <h4>Attendees:</h4>
                             <ul>
                                 <t t-foreach="doc.attendee_ids" t-as="attendee">
                                     <li><span t-field="attendee.name"/>
@@ -48,6 +56,12 @@
                                     </li>
                                 </t>
                             </ul>
+                            <!-- adding page footer -->
+                            <div class="footer">
+                                <div class="text-center">
+                                    <span class="page"/>
+                                </div>
+                            </div>
                         </div>
                     </t>
                 </t>
