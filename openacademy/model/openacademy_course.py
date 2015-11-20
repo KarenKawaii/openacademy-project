@@ -1,8 +1,10 @@
-from openerp import api, fields, models, _
-
+# coding: utf-8
 '''
 This module create model of Course
 '''
+
+from openerp import api, fields, models, _
+
 
 class Course(models.Model):
     '''
@@ -30,7 +32,6 @@ class Course(models.Model):
 
     @api.one  #  api.one send defaults params: cr, uid, id, context
     def copy(self, default=None):
-        print "estoy pasando por la funcion heredada de copy en cursos"
         if default is None:
             default = {}
         #  default['name'] = self.name + ' (copy)'
