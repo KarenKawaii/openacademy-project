@@ -62,8 +62,13 @@ class GlobalTestOpenAcademyCourse(TransactionCase):
             new_id2 = self.create_course('test1', 'test_description', None)
 
     def test_30_duplicate_course(self):
+        #import pdb; pdb.set_trace()
         '''
         Test to duplicate a course and check that works fine.
         '''
         course = self.env.ref('openacademy.course0')
         course.copy()
+        name_copy_course = u'Copy of Course 0 (1)'
+        self.assertEqual(course.copy().name,
+                         name_copy_course,
+                         "The copy course method doesn't work fine.")
